@@ -1,0 +1,26 @@
+/* Basic styles for AppDownload component */
+.app-download{
+  background: linear-gradient(90deg, #fff, #f7f7f7);
+  padding:20px 8%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border-radius:10px;
+  margin:24px 0;
+}
+
+.app-download p{
+  margin:0;
+  font-weight:600;
+}
+
+.app-download-platforms img{
+  height:44px;
+  margin-left:12px;
+}
+
+@media (max-width:600px){
+  .app-download{flex-direction:column;align-items:flex-start}
+  .app-download-platforms img{height:36px}
+}

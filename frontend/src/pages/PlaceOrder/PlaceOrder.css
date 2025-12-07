@@ -1,0 +1,61 @@
+/* Basic layout for place order page */
+.place-order{
+  display:flex;
+  gap:24px;
+  padding:24px;
+  max-width:1100px;
+  margin:24px auto;
+  box-sizing:border-box;
+}
+.place-order-left{
+  flex:2;
+  background:#fff;
+  padding:18px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+}
+.place-order-right{
+  flex:1;
+}
+.place-order .title{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+.multi-fields{
+  display:flex;
+  gap:12px;
+}
+.multi-fields input{flex:1}
+input[type="text"], input[type="email"], input[type="tel"]{
+  width:100%;
+  padding:10px 12px;
+  margin:8px 0;
+  border:1px solid #e6e6e6;
+  border-radius:6px;
+  box-sizing:border-box;
+}
+.cart-total{
+  background:#fff;
+  padding:18px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+}
+.cart-total h2{margin:0 0 12px 0}
+.cart-total-details{display:flex;justify-content:space-between;margin:8px 0}
+.checkout-btn{
+  display:block;
+  width:100%;
+  margin-top:12px;
+  padding:12px;
+  background:#ff6b6b;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+@media (max-width:800px){
+  .place-order{flex-direction:column;padding:12px}
+  .place-order-right{width:100%}
+}

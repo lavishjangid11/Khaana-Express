@@ -1,0 +1,150 @@
+/* List.css — admin All Foods list styles
+   - Grid-style table, image column, action buttons
+   - Matches admin theme (light card, subtle borders, red accents)
+*/
+
+.list.add {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: transparent;
+}
+
+.list > p:first-of-type {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.list-table {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.list-table-format {
+  display: grid;
+  grid-template-columns: 120px 1fr 160px 120px 120px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.list-table-format.title {
+  background: transparent;
+  font-weight: 700;
+  color: #444;
+}
+
+.list-table-format img {
+  width: 96px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.list-table-format p {
+  margin: 0;
+  color: #444;
+  font-size: 14px;
+}
+
+.list-table-format:last-child {
+  border-bottom: none;
+}
+
+/* Action cell styling */
+.list-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-list-edit,
+.btn-list-delete {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.18s ease;
+}
+
+.btn-list-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.btn-list-delete {
+  color: #c0392b;
+  border-color: rgba(192,57,43,0.08);
+}
+
+.btn-list-delete:hover {
+  background: rgba(192,57,43,0.04);
+}
+
+/* Empty state */
+.list-empty {
+  padding: 40px;
+  text-align: center;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .list-table-format {
+    grid-template-columns: 100px 1fr 120px 100px 80px;
+  }
+
+  .list-table-format img {
+    width: 84px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 720px) {
+  .list-table-format {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+    grid-auto-rows: auto;
+  }
+
+  .list-table-format.title {
+    display: none;
+  }
+
+  .list-table-format img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .list-table-format p {
+    font-size: 15px;
+  }
+
+  .list-table-format > *:nth-child(1) { order: 1; }
+  .list-table-format > *:nth-child(2) { order: 2; }
+  .list-table-format > *:nth-child(3) { order: 3; }
+  .list-table-format > *:nth-child(4) { order: 4; }
+  .list-table-format > *:nth-child(5) { order: 5; }
+
+  .btn-list-edit,
+  .btn-list-delete {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.cursor{
+    cursor: pointer;
+}

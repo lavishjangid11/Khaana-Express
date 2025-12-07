@@ -1,0 +1,32 @@
+/* Styles for FoodDisplay component */
+.food-display{
+  padding:48px 6%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.food-display h2{
+  font-size:28px;
+  margin-bottom:12px;
+  font-weight:700;
+  color:#222;
+}
+
+.food-display-list{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:20px;
+  align-items:start;
+}
+
+.no-food{
+  color:#888;
+}
+
+/* Small screens */
+@media (max-width:768px){
+  .food-display{padding:24px 5%}
+  .food-display h2{font-size:20px}
+  .food-display-list{gap:14px}
+}
+

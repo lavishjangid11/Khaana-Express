@@ -1,0 +1,23 @@
+/* Home page styles */
+.home-page{
+	background: #fafafa;
+	min-height: 100vh;
+	color: #222;
+}
+
+.home-main{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 32px;
+}
+
+/* small helpers */
+.container{
+	padding: 0 16px;
+}
+
+@media (max-width: 768px){
+	.home-main{
+		padding-top: 16px;
+	}
+}
